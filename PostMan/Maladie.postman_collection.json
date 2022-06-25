@@ -1,0 +1,850 @@
+{
+	"info": {
+		"_postman_id": "cffd86cd-5967-431d-9631-54c6a4b40c30",
+		"name": "Maladie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17284909"
+	},
+	"item": [
+		{
+			"name": "patients",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/patients/login.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&cod=123&ip=123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"patients",
+								"login.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "cod",
+									"value": "123"
+								},
+								{
+									"key": "ip",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 11,\n    \"Nom\": \"zakaria\",\n    \"Prenom\": \"yahya\",\n    \"tel\": 667673189,\n    \"sexe\": \"homme\",\n    \"datnais\": \"2001-07-07\",\n    \"protocole\": \"dwa lbyada\",\n    \"date_cure\": \"2022-03-23\",\n    \"age\": 22,\n    \"email\": \"yahya@gmail.com\",\n    \"id_admin\": 1,\n    \"id_etat\": 1,\n    \"id_tox\": 1,\n    \"id_gonadique\": 1,\n    \"code\": 1,\n    \"id_cu\": 1,\n    \"id_degestive\": 1,\n    \"id_oculaire\": 1,\n    \"token\": \"\",\n    \"ip\": \"124\",\n    \"cod\": \"124\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/patients/create.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"patients",
+								"create.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/patients/read.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&start=0&end=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"patients",
+								"read.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_bydid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/patients/read_byid.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&id=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"patients",
+								"read_byid.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 9,\n    \"Nom\": \"hamza\",\n    \"Prenom\": \"devhch\",\n    \"tel\": 667673189,\n    \"sexe\": \"homme\",\n    \"datnais\": \"2001-07-07\",\n    \"protocole\": \"dwa lbyada\",\n    \"date_cure\": \"2022-03-23\",\n    \"age\": 22,\n    \"email\": \"yahya@gmail.com\",\n    \"id_admin\": 1,\n    \"id_etat\": 1,\n    \"id_tox\": 1,\n    \"id_gonadique\": 1,\n    \"code\": 1,\n    \"id_cu\": 1,\n    \"id_degestive\": 1,\n    \"id_oculaire\": 1,\n    \"token\": \"\",\n    \"ip\": \"124\",\n    \"cod\": \"124\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/patients/update.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"patients",
+								"update.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 8\n}"
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/patients/delete.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"patients",
+								"delete.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "medecins",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/medecins/login.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&email=12&password=111",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"medecins",
+								"login.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "email",
+									"value": "12"
+								},
+								{
+									"key": "password",
+									"value": "111"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_medecin\": 1,\n    \"Nom\": \"hamza\",\n    \"Prenom\": \"ana\",\n    \"email\": \"123\",\n    \"telephone\": 1111,\n    \"id_admin\": 1,\n    \"password\": \"0000\",\n    \"token\": \"ddudd77d7duh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/medecins/create.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"medecins",
+								"create.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/medecins/read.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&start=0&end=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"medecins",
+								"read.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_medecin\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/medecins/delete.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"medecins",
+								"delete.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_medecin\": 2,\n    \"Nom\": \"yahya\",\n    \"Prenom\": \"sl\",\n    \"email\": \"123\",\n    \"telephone\": 1234,\n    \"id_admin\": 1,\n    \"password\": \"0000\",\n    \"token\": \"ddudd77d7duh\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/medecins/update.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"medecins",
+								"update.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_bydid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/medecins/read_byid.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&id_medecin=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"medecins",
+								"read_byid.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "id_medecin",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "fievre",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_fievre\": 7,\n    \"dure\": 10,\n    \"mesure\": 39,\n    \"date_apparition\": \"2023-03-06\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/fievre/create.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"fievre",
+								"create.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/fievre/read.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&start=0&end=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"fievre",
+								"read.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_fievre\": 3\n}"
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/fievre/delete.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"fievre",
+								"delete.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_fievre\": 5,\n    \"dure\": 10,\n    \"mesure\": 49,\n    \"date_apparition\": \"2024-03-06\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/fievre/update.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"fievre",
+								"update.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_bydid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/fievre/read_byid.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&id_fievre=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"fievre",
+								"read_byid.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "id_fievre",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EtatGenerale",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"painte\": \"non\",\n        \"fatigue\": \"non\",\n        \"travail\": \"oui\",\n        \"activites\": \"oui\",\n        \"appetit\": \"oui\",\n        \"autonomie\": \"non\",\n        \"douleur\": \"non\",\n        \"depression\": \"oui\",\n        \"id_etat\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/etat_generale/create.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"etat_generale",
+								"create.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/etat_generale/read.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&start=0&end=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"etat_generale",
+								"read.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_bydid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/etat_generale/read_byid.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX&id_etat=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"etat_generale",
+								"read_byid.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								},
+								{
+									"key": "id_etat",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"painte\": \"oui\",\n    \"fatigue\": \"non\",\n    \"travail\": \"oui\",\n    \"activites\": \"oui\",\n    \"appetit\": \"oui\",\n    \"autonomie\": \"non\",\n    \"douleur\": \"non\",\n    \"depression\": \"oui\",\n    \"id_etat\": 3\n}"
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/etat_generale/update.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"etat_generale",
+								"update.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_etat\": 3\n}"
+						},
+						"url": {
+							"raw": "http://localhost/devhch/e-sante-api/api/etat_generale/delete.php?token=NmXJeRmCaPDys6Lg6GQHbFxTX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"devhch",
+								"e-sante-api",
+								"api",
+								"etat_generale",
+								"delete.php"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "NmXJeRmCaPDys6Lg6GQHbFxTX"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
